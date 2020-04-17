@@ -25,7 +25,8 @@ SECRET_KEY = 'f%pg$9g752k86tyv70$a8vri#zmu=^j6%-v4uzqy6=6w&e^t_h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',
+                os.environ.get('HOSTNAME')] 
 
 
 # Application definition
