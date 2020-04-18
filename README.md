@@ -59,3 +59,26 @@
 ### Check content
 - select * from django_migrations;
 - .quit
+
+## Bootstrap
+- sudo pip3 install django_forms_bootstrap
+- in settings.py, write:
+```python
+INSTALLED_APPS = [
+    .
+    .
+    .
+    'django_forms_bootstrap',
+    .
+]
+```
+- Add {% load bootstrap_tags %} and | as_bootstrap }} in the registration and login HTML pages 
+
+## Static files
+- Add {% load staticfile %} to the top of base.html and link to a the css file {% static 'css/style.css' %}
+- Add the following to the settings.py file_
+```python
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+```
